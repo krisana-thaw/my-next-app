@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { MyButton } from "../components/Button/MyButton/MyButton";
-import { TomatoButton } from "../components/Button/TomatoButton/TomatoButton";
-import { MyInput } from "../components/Input/MyInput/MyInput";
+import { MyButton } from "../styledComponents/Button/MyButton/MyButton";
+import { TomatoButton } from "../styledComponents/Button/TomatoButton/TomatoButton";
+import { MyInput } from "../styledComponents/Input/MyInput/MyInput";
 
 export default function Home() {
   return (
@@ -20,10 +20,8 @@ export default function Home() {
         <p className={styles.description}>
           Test deploy next app with github action
         </p>
-        <MyButton />
-        MyButton
-        <TomatoButton />
-        TomatoButton
+        <MyButton>MyButton</MyButton>
+        <TomatoButton>TomatoButton</TomatoButton>
         <MyInput
           defaultValue="@probablyup"
           type="text"
