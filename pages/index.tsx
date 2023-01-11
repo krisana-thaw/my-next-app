@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import { MyButton } from "../components/Button/MyButton/MyButton";
+import { TomatoButton } from "../components/Button/TomatoButton/TomatoButton";
+import { MyInput } from "../components/Input/MyInput/MyInput";
 
 export default function Home() {
   return (
@@ -15,10 +17,27 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Krisana Next app!</a>
         </h1>
-
         <p className={styles.description}>
           Test deploy next app with github action
         </p>
+        <MyButton />
+        MyButton
+        <TomatoButton />
+        TomatoButton
+        <MyInput
+          defaultValue="@probablyup"
+          type="text"
+          topValue={24}
+          bottomValue={24}
+          inputColor={"palevioletred"}
+        />
+        <MyInput
+          defaultValue="@geelen"
+          type="text"
+          topValue={20}
+          bottomValue={20}
+          inputColor={"red"}
+        />
       </main>
 
       <footer className={styles.footer}>
@@ -27,12 +46,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
